@@ -1,9 +1,10 @@
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
+import { State } from 'src/issues/interfaces/issue';
 
 export const useIssuesStore = defineStore( 'issues', () => {
 
-  const state = ref( '' );
+  const state = ref<State>( State.All );
   const labels = ref<string[]>( [] );
 
   const toggleLabel = ( label: string ) => {

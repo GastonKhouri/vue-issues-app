@@ -4,19 +4,17 @@ import { useLabels } from '../../composables/useLabels';
 
 const { labelsQuery, toggleLabel, selectedLabels } = useLabels();
 
-const { data, isLoading } = labelsQuery;
-
 </script>
 
 <template>
 
   <div class="q-mt-md">
 
-    <LoaderSpinner v-if="isLoading" size="50px" :thickness="1" :show-text="false" />
+    <LoaderSpinner v-if="labelsQuery.isLoading.value" size="50px" :thickness="1" :show-text="false" />
 
     <q-chip
       v-else
-      v-for="label of data"
+      v-for="label of labelsQuery.data.value"
       :key="label.id"
       :style="{color: `#${label.color}`}"
       clickable

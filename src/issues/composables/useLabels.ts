@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/vue-query';
 
-import { Label } from '../interfaces/labels';
+import { Label } from '../interfaces/label';
 import { githubApi } from '../../api/githubApi';
 import { useIssuesStore } from 'src/stores/issues';
 import { computed } from 'vue';
