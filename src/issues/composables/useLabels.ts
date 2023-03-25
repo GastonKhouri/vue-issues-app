@@ -1,10 +1,9 @@
 import { useQuery } from '@tanstack/vue-query';
+import { storeToRefs } from 'pinia';
 
 import { Label } from '../interfaces/label';
 import { githubApi } from '../../api/githubApi';
 import { useIssuesStore } from 'src/stores/issues';
-import { computed } from 'vue';
-import { storeToRefs } from 'pinia';
 
 const getLabels = async (): Promise<Label[]> => {
 

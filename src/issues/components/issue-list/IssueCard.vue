@@ -14,7 +14,7 @@ const props = defineProps<Props>();
 
 const { issue } = toRefs(props);
 
-const { prefetchIssue, setIssueCacheData } = useIssue(issue.value.number, {
+const { setIssueCacheData } = useIssue(issue.value.number, {
   autoLoad: false,
 });
 
